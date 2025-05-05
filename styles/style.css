@@ -71,8 +71,8 @@ ol {
   padding: 0 30px;
   align-items: end;
   gap: 30px;
-  height: 100%;
-  max-height: 534px;
+  height: max-content;
+  margin: auto 0;
 }
 
 .result {
@@ -154,7 +154,7 @@ ol {
   font-size: 18px;
   font-weight: 400;
   line-height: normal;
-  color: #fff;
+  color: currentColor;
   background: transparent;
   border: 1px solid #fff;
   border-right: 0;
@@ -184,13 +184,16 @@ ol {
   object-fit: contain;
   min-width: 711px;
   position: relative;
-  min-height: 386px;
+  max-height: 386px;
 }
 
 .result__video {
   object-fit: cover;
+  object-position: center center;
   width: 100%;
   height: 100%;
+  min-width: 711px;
+  min-height: 386px;
 }
 
 .button {
@@ -200,7 +203,7 @@ ol {
   border: 1px solid #fff;
   font-weight: 700;
   font-size: 18px;
-  height: 34px;
+  padding: 5px 0;
   text-align: center;
   cursor: pointer;
 }
@@ -235,7 +238,7 @@ ol {
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 23px;
 }
 
 .content__list-container {
@@ -246,7 +249,7 @@ ol {
 }
 
 .title {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-size: 75px;
   line-height: 94%;
   font-weight: 700;
@@ -274,7 +277,7 @@ ol {
 
 .content__card-link {
   text-decoration: none;
-  color: #fff;
+  color: currentColor;
   display: block;
 }
 
@@ -303,20 +306,20 @@ ol {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 6px;
 }
 
 .content__video-card-title {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 30px;
-  line-height: normal;
+  line-height: 100%;
   text-transform: uppercase;
+  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
   max-width: 99%;
   display: block;
+  -webkit-line-clamp: 1;
 }
 
 .content__video-card-description {
